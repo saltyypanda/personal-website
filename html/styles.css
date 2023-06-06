@@ -91,13 +91,18 @@ nav {
 .right-col h1 {
   font-size: 55px;
   font-weight: 600;
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 
 .right-col p {
   color: #adadad;
   margin: 20px 0 70px;
 }
+
+/* #pseudo-tag {
+  position: relative;
+  margin-bottom: 0px;
+} */
 
 .social-media {
   display: flex;
