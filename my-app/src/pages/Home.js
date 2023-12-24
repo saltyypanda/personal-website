@@ -1,11 +1,12 @@
 import React from "react";
+import '../styles.scss'
 
 function Home() {
     return (
-        <>
-            <h1>Home</h1>
-            <p>unimplemented page</p>
-        </>
+        <div>
+            <h1 className="text-white">Home</h1>
+            <p className="text-white">unimplemented page</p>
+        </div>
     );
 }
 

@@ -20,11 +20,10 @@ const NavBar = (args) => {
     const toggle = () => setIsOpen(!isOpen);
 
     return (
-        <div>
-            <Navbar {...args}>
-                <NavbarBrand href="/">Home</NavbarBrand>
-                <NavbarToggler onClick={toggle} />
-                <Collapse isOpen={isOpen} navbar>
+        <Navbar {...args}>
+            <NavbarBrand href="/">Home</NavbarBrand>
+            <NavbarToggler onClick={toggle} />
+            <Collapse isOpen={isOpen} navbar>
                 <Nav className="me-auto" navbar>
                     <NavItem>
                     <NavLink href="/components/">Components</NavLink>
@@ -47,9 +46,8 @@ const NavBar = (args) => {
                     </UncontrolledDropdown>
                 </Nav>
                 <NavbarText>Simple Text</NavbarText>
-                </Collapse>
-            </Navbar>
-        </div>
+            </Collapse>
+        </Navbar>
     );
 };
  

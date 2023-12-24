@@ -1,4 +1,6 @@
 .App {
+  background: linear-gradient(to bottom, $purple, $pink);
+  background-size: cover;
   text-align: center;
 }
 

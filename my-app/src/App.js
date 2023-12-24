@@ -15,22 +15,24 @@ import Home from './pages/Home';
  
 function App() {
     return (
-        <Router>
-            <NavBar />
-            <Routes>
-                <Route exact path="/" element={<Home />} />
-                {/* <Route path="/about" element={<About />} />
-                <Route
-                    path="/contact"
-                    element={<Contact />}
-                />
-                <Route path="/blogs" element={<Blogs />} />
-                <Route
-                    path="/sign-up"
-                    element={<SignUp />}
-                /> */}
-            </Routes>
-        </Router>
+        <div className='background'>
+            <Router>
+                <NavBar dark="true" />
+                <Routes>
+                    <Route exact path="/" element={<Home />} />
+                    {/* <Route path="/about" element={<About />} />
+                    <Route
+                        path="/contact"
+                        element={<Contact />}
+                    />
+                    <Route path="/blogs" element={<Blogs />} />
+                    <Route
+                        path="/sign-up"
+                        element={<SignUp />}
+                    /> */}
+                </Routes>
+            </Router>
+        </div>
     );
 }
  
