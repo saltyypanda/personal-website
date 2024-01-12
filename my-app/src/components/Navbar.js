@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+
+import { EmailIcon, GitHubIcon, LinkedInIcon } from "./Icons";
+
 import {
     Collapse,
     Navbar,
@@ -11,7 +14,6 @@ import {
     DropdownToggle,
     DropdownMenu,
     DropdownItem,
-    NavbarText,
   } from 'reactstrap';
  
 const NavBar = (args) => {
@@ -21,8 +23,21 @@ const NavBar = (args) => {
 
     return (
         <Navbar {...args}>
-            <NavbarBrand href="/">Home</NavbarBrand>
-            <NavbarToggler onClick={toggle} />
+            <NavbarBrand href="/">My Personal Website</NavbarBrand>
+            <div className="d-flex flex-row">
+                <div>
+                    <a href="https://github.com/saltyypanda" target="_blank" rel="noopener noreferrer">
+                        <GitHubIcon className="contact-button"/>
+                    </a>
+                    <a href="https://www.linkedin.com/in/tess-hacker-741045257/" target="_blank" rel="noopener noreferrer">
+                        <LinkedInIcon className="contact-button"/>
+                    </a>
+                    <a href="mailto:esh7943@rit.edu" target="_blank" rel="noopener noreferrer">
+                        <EmailIcon className="contact-button"/>
+                    </a>
+                </div>
+                <NavbarToggler className={"hamburger mx-3"} onClick={toggle} />
+            </div>
             <Collapse isOpen={isOpen} navbar>
                 <Nav className="me-auto" navbar>
                     <NavItem>
@@ -45,7 +60,6 @@ const NavBar = (args) => {
                     </DropdownMenu>
                     </UncontrolledDropdown>
                 </Nav>
-                <NavbarText>Simple Text</NavbarText>
             </Collapse>
         </Navbar>
     );
