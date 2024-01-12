@@ -6,7 +6,9 @@ function Home() {
         <>
             <div className="home-image-container">
                 <div className="home-text">
-                    <p className="code-text">hello world, i'm</p>
+                    <div className="d-inline">
+                        <p className="code-text">hello world, i'm</p>
+                    </div>
                     <h1 className="name display-1">Tess Hacker</h1>
                     <p className="mt-4 lead">A second-year software engineering major at the Rochester Institute of Technology</p>
                 </div>
