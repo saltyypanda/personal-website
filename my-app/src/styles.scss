@@ -27,12 +27,54 @@ $utilities: map-merge(
 @import "../node_modules/bootstrap/scss/utilities/api";
 
 .navbar {
-  background: purple-900;
+  background: $black;
   color: white;
 }
 
 .background {
-  background-image: linear-gradient(to bottom, $purple-800, $purple-700, $pink-500, $orange-500);
-  width: 100vh;
+  background-image: linear-gradient(to bottom, $black, $purple-800);
+  width: 100vw;
   height: 100vh;
+}
+
+.home-text {
+  color: white;
+  font-weight: 500;
+}
+
+.home-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+}
+
+.code-text {
+  font-size: 2em;
+  font-family: 'Courier New', Courier, monospace;
+  margin-top: 10%;
+}
+
+.name {
+  font-size: 5em;
+}
+
+.home-images {
+  margin-left: 70px;
+}
+
+.contact-button {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.contact-button:hover {
+  transition: transform 0.2s ease-in-out;
+  transform: scale(1.2);
+  fill: pink;
+}
+
+.hamburger:hover {
+  transition: transform 0.2s ease-in-out;
+  transform: scale(1.2);
 }
