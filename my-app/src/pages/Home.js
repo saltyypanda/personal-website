@@ -1,13 +1,13 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef } from "react";
 import '../styles.scss'
-import TypewriterComponent from "typewriter-effect";
 import Typewriter from 'typewriter-effect/dist/core';
+import introductions from "../data/introductions";
+import IconBar from "../components/IconBar";
 
-// var introduction = `
-//     I am second-year software engineering major at the Rochester Institute of Technology.
-//     I am an active member of RIT's Society of Software Engineers, or the SSE. I was the SSE's
-//     Head of Talks for Fall 2023 semester, and I am Tech Head for Spring 2024 semester.
-// `
+var info = `
+    I am an active member of RIT's Society of Software Engineers, or the SSE. I was the SSE's
+    Head of Talks for Fall 2023 semester, and I am Tech Head for Spring 2024 semester.
+`
 
 var introduction = `
     Second-year software engineering major at the Rochester Institute of Technology.
@@ -16,37 +16,18 @@ var introduction = `
 function Home() {
     const codeTextRef = useRef(null);
 
-    useEffect(() => {
-        const codeTextElement = codeTextRef.current;
+    const codeTextElement = codeTextRef.current;
 
-        var typewriter = new Typewriter(codeTextElement, {
-            loop: true,
-            delay: 75,
-          });
-          
-          typewriter
-            .pauseFor(2500)
-            .typeString("hello world, i'm")
-            .pauseFor(4000)
-            .deleteChars(10)
-            .pauseFor(500)
-            .start();
-
-        const handleAnimationEnd = () => {
-            console.log("ended")
-        };
-
-        // Add event listener for animationend
-        codeTextElement.addEventListener('animationend', handleAnimationEnd);
-
-        // Cleanup the event listener when the component is unmounted
-        return () => { 
-            codeTextElement.removeEventListener('animationend', handleAnimationEnd);
-        };
-    }, []); // Empty dependency array ensures the effect runs only once on mount
+    new Typewriter(codeTextElement, {
+        loop: true,
+        strings: introductions,
+        delay: 100,
+        pauseFor: 5000,
+        autoStart: true
+        });
 
     return (
-        <>
+        <div className="d-flex flex-column justify-content-center align-items-center">
             <div className="home-image-container">
                 <div className="home-text">
                     <div className="d-inline">
@@ -62,10 +43,12 @@ function Home() {
                     />
                 </div>
             </div>
-            {/* <div className="d-flex flex-col text-center justify-content-center w-50 mx-auto">
-                <p className="mt-4 lead text-white centered">{introduction}</p>
+            {/* <div className="mt-5 d-flex flex-col text-center justify-content-center w-50 mx-auto">
+                <h2>More about me</h2>
+                <p className="mt-4 lead text-white centered">{info}</p>
             </div> */}
-        </>
+            <IconBar className={"mt-3"}/>
+        </div>
     );
 }
 
