@@ -19,11 +19,14 @@ const NavBar = (args) => {
     return (
         <Navbar {...args}>
             <NavbarBrand href="/">
-                <StarIcon className={'w-30 h-30'}/>
+                <a href="/">
+                    <StarIcon className={'w-30 h-30'}/>
+                </a>
             </NavbarBrand>
             <div className="d-flex flex-row">
+                <a href="/about" className="page-link">about</a>
                 <a href="/" className="page-link">projects</a>
-                <a href="/" className="page-link">about</a>
+                <a href="/" className="page-link">experience</a>
                 <a href="/" onClick={handleResumeDownload} className="page-link">resume</a>
             </div>
         </Navbar>
