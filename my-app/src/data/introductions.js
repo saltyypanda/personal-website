@@ -3,7 +3,7 @@ const introductions = [
     "welcome! my name is",
     "they call me...",
     "salutations! i am",
-    "the names hacker...",
+    "the name's hacker...",
     "on earth, i'm called"
 ]
 
