@@ -1,6 +1,7 @@
 import React from "react";
 
 import { StarIcon } from "./Icons";
+import resume from '../data/resume.pdf'
 
 import {
     Navbar,
@@ -8,6 +9,13 @@ import {
   } from 'reactstrap';
  
 const NavBar = (args) => {
+    const handleResumeDownload = () => {
+        const link = document.createElement('a');
+        link.href = resume;
+        link.download = 'resume.pdf'; // Replace with the desired file name
+        link.click();
+    }
+
     return (
         <Navbar {...args}>
             <NavbarBrand href="/">
@@ -16,7 +24,7 @@ const NavBar = (args) => {
             <div className="d-flex flex-row">
                 <a href="/" className="page-link">projects</a>
                 <a href="/" className="page-link">about</a>
-                <a href="/" className="page-link">resume</a>
+                <a href="/" onClick={handleResumeDownload} className="page-link">resume</a>
             </div>
         </Navbar>
     );
