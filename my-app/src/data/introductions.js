@@ -4,7 +4,7 @@ const introductions = [
     "they call me...",
     "salutations! i am",
     "the names hacker...",
-    "on earth, i'm known as"
+    "on earth, i'm called"
 ]
 
 export default introductions;
