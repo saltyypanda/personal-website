@@ -9,10 +9,7 @@ import {
 
 import Home from './pages/Home';
 import Resume from './pages/Resume';
-// import About from "./pages/about";
-// import Blogs from "./pages/blogs";
-// import SignUp from "./pages/signup";
-// import Contact from "./pages/contact";
+import About from "./pages/About";
  
 function App() {
     return (
@@ -23,8 +20,8 @@ function App() {
                     <Routes>
                         <Route exact path="/" element={<Home />} />
                         <Route exact path="/resume" element={<Resume />} />
-                        {/* <Route path="/about" element={<About />} />
-                        <Route
+                        <Route path="/about" element={<About />} />
+                        {/* <Route
                             path="/contact"
                             element={<Contact />}
                         />

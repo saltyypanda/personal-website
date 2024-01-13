@@ -4,11 +4,6 @@ import Typewriter from 'typewriter-effect/dist/core';
 import introductions from "../data/introductions";
 import IconBar from "../components/IconBar";
 
-// var info = `
-//     I am an active member of RIT's Society of Software Engineers, or the SSE. I was the SSE's
-//     Head of Talks for Fall 2023 semester, and I am Tech Head for Spring 2024 semester.
-// `
-
 var introduction = `
     Second-year software engineering major at the Rochester Institute of Technology.
 `
@@ -28,24 +23,29 @@ function Home() {
 
     return (
         <div className="d-flex flex-column justify-content-center align-items-center">
-            <div className="home-image-container">
-                <div className="home-text">
+            <div className="home-container">
+                <div className="home-child text-white">
                     <p className="code-text" ref={codeTextRef}></p>
                     <h1 className="display-1">Tess Hacker</h1>
-                    <p className="mt-4 lead text-white centered">{introduction}</p>
+                    <h3 className="mt-4 lead">{introduction}</h3>
                 </div>
-                <div className="home-images">
-                    <img
+                <div className="home-child">
+                    {/* <img
                         src="https://img2.wikia.nocookie.net/__cb20120830141031/adventuretimewithfinnandjake/images/4/4b/Princess_bubblegum_character.png"
                         alt="princess bubblegum!"
-                    />
+                    /> */}
+                    <p className="mt-4 lead text-white">
+                        I began my software engineering journey in my first year of college
+                        at RIT, just learning <em>Hello, World!</em> in Python. One year later,
+                        and I am just as in love with programming as I was during that very first class.
+                        <br/><br/>
+                        Below are links to my GitHub, LinkedIn, and email. Feel
+                        free to shoot me a message. On the right of the top navbar are links to other
+                        pages in this website. Thank you for being here!
+                    </p>
                 </div>
             </div>
-            {/* <div className="mt-5 d-flex flex-col text-center justify-content-center w-50 mx-auto">
-                <h2>More about me</h2>
-                <p className="mt-4 lead text-white centered">{info}</p>
-            </div> */}
-            <IconBar className={"mt-3"}/>
+            <IconBar className={"mt-5"}/>
         </div>
     );
 }
