@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import '../styles.scss'
 import Typewriter from 'typewriter-effect/dist/core';
 import introductions from "../data/introductions";
@@ -11,15 +11,23 @@ var introduction = `
 function Home() {
     const codeTextRef = useRef(null);
 
-    const codeTextElement = codeTextRef.current;
-
-    new Typewriter(codeTextElement, {
-        loop: true,
-        strings: introductions,
-        delay: 100,
-        pauseFor: 5000,
-        autoStart: true
+    useEffect(() => {
+        const codeTextElement = codeTextRef.current;
+    
+        const typewriter = new Typewriter(codeTextElement, {
+            loop: true,
+            strings: introductions,
+            delay: 100,
+            pauseFor: 5000,
+            autoStart: true
         });
+    
+        return () => {
+            // Clean up the typewriter instance when the component unmounts
+            typewriter.stop();
+        };
+        }, []); // Empty dependency array ensures this effect runs only once on mount
+        
 
     return (
         <div className="d-flex flex-column justify-content-center align-items-center">
@@ -28,6 +36,7 @@ function Home() {
                     <p className="code-text" ref={codeTextRef}></p>
                     <h1 className="display-1">Tess Hacker</h1>
                     <h3 className="mt-4 lead">{introduction}</h3>
+                    <IconBar className={"mt-5"}/>
                 </div>
                 <div className="home-child">
                     {/* <img
@@ -45,7 +54,7 @@ function Home() {
                     </p>
                 </div>
             </div>
-            <IconBar className={"mt-5"}/>
+            
         </div>
     );
 }
