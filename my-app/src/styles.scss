@@ -25,6 +25,13 @@ $utilities: map-merge(
 );
 
 @import "../node_modules/bootstrap/scss/utilities/api";
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// overridden styles
+
+$display-1-size: 3rem;
+
+// custom styles
 
 .navbar {
   background: $black;
@@ -62,10 +69,6 @@ $utilities: map-merge(
   position: relative;
 }
 
-.name {
-  font-size: 5em;
-}
-
 .home-images {
   margin-left: 70px;
 }
@@ -84,4 +87,16 @@ $utilities: map-merge(
 .hamburger:hover {
   transition: transform 0.2s ease-in-out;
   transform: scale(1.2);
+}
+
+.page-link {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  font-size: 1.1em !important;
+}
+
+.page-link:hover {
+  transition: transform 0.2s ease-in-out;
+  transform: scale(1.1);
+  color: #f09fc2;
 }

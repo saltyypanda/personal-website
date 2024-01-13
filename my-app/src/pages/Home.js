@@ -4,10 +4,10 @@ import Typewriter from 'typewriter-effect/dist/core';
 import introductions from "../data/introductions";
 import IconBar from "../components/IconBar";
 
-var info = `
-    I am an active member of RIT's Society of Software Engineers, or the SSE. I was the SSE's
-    Head of Talks for Fall 2023 semester, and I am Tech Head for Spring 2024 semester.
-`
+// var info = `
+//     I am an active member of RIT's Society of Software Engineers, or the SSE. I was the SSE's
+//     Head of Talks for Fall 2023 semester, and I am Tech Head for Spring 2024 semester.
+// `
 
 var introduction = `
     Second-year software engineering major at the Rochester Institute of Technology.
@@ -30,10 +30,8 @@ function Home() {
         <div className="d-flex flex-column justify-content-center align-items-center">
             <div className="home-image-container">
                 <div className="home-text">
-                    <div className="d-inline">
-                        <p className="code-text" ref={codeTextRef}></p>
-                    </div>
-                    <h1 className="name display-1">Tess Hacker</h1>
+                    <p className="code-text" ref={codeTextRef}></p>
+                    <h1 className="display-1">Tess Hacker</h1>
                     <p className="mt-4 lead text-white centered">{introduction}</p>
                 </div>
                 <div className="home-images">

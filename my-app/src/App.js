@@ -17,20 +17,22 @@ function App() {
     return (
         <div className='background'>
             <Router>
-                <NavBar dark="true" />
-                <Routes>
-                    <Route exact path="/" element={<Home />} />
-                    {/* <Route path="/about" element={<About />} />
-                    <Route
-                        path="/contact"
-                        element={<Contact />}
-                    />
-                    <Route path="/blogs" element={<Blogs />} />
-                    <Route
-                        path="/sign-up"
-                        element={<SignUp />}
-                    /> */}
-                </Routes>
+                <div className='w-75 mx-auto'>
+                    <NavBar color="transparent" dark="true" className="pt-5 mb-5"/>
+                    <Routes>
+                        <Route exact path="/" element={<Home />} />
+                        {/* <Route path="/about" element={<About />} />
+                        <Route
+                            path="/contact"
+                            element={<Contact />}
+                        />
+                        <Route path="/blogs" element={<Blogs />} />
+                        <Route
+                            path="/sign-up"
+                            element={<SignUp />}
+                        /> */}
+                    </Routes>
+                </div>
             </Router>
         </div>
     );
