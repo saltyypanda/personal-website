@@ -44,16 +44,20 @@ $display-1-size: 3rem;
   height: 100vh;
 }
 
-.home-text {
-  color: white;
-  font-weight: 500;
+.home-container {
+  display: flex;
+  padding: 10%;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+
+  // border: 1rem solid white;
+  // border-style: double;
 }
 
-.home-image-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10%;
+.home-child {
+  flex: 1;
+  margin-right: 70px; /* Adjust the margin as needed */
 }
 
 .code-text {
@@ -67,10 +71,6 @@ $display-1-size: 3rem;
 
   letter-spacing: .15em;
   position: relative;
-}
-
-.home-images {
-  margin-left: 70px;
 }
 
 .contact-button {
